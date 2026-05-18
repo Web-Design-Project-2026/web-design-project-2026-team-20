@@ -3,22 +3,101 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About us</title>
+    <title>About Us - Fika Hörnet</title>
     <link rel="stylesheet" href="web.css" />
   </head>
+
   <body>
-    <header class="fika-hornet">
-      <h1>Fika Hörnet</h1>
+    <header>
+      <div class="logo">
+        <img src="logo.jpg" alt="Fika Hörnet Logo" />
+      </div>
+      <nav class="navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <nav class="main-navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="menu.html">Our Menu</a></li>
-        <li><a href="menu_bread.html">Bread & Pastries</a></li>
-        <li><a href="menu_drinks.html">Coffee & Drinks</a></li>
-        <li><a href="about.html">About Us</a></li>
-      </ul>
-    </nav>
+    <main>
+      <section class="intro">
+        <h2>About Us</h2>
+        <p>
+          Fika Hörnet is a cozy cafe located in the heart of Jönköping. Founded
+          with a passion for Swedish fika culture, we offer a warm and inviting
+          space where customers can relax and enjoy freshly baked pastries and
+          quality coffee. Our goal is to create a welcoming environment where
+          people can take a break from their day, meet friends, and enjoy
+          delicious treats.
+        </p>
+      </section>
+
+      <div class="about-images">
+        <img
+          src="cafe-counter.jpg"
+          alt="The cozy service counter and espresso bar at Fika Hörnet"
+        />
+        <img
+          src="pastry-display.jpg"
+          alt="A glass display case filled with fresh berry tarts and cakes"
+        />
+      </div>
+      <!--This gallery of images are tied to the hifi so we should have similar images 
+      else we need to change the description of it-->
+
+      <section class="story">
+        <h3>Our Story</h3>
+        <p>
+          Established in 2015, Fika Hörnet was born out of a love for the
+          Swedish tradition of fika — a cherished moment to pause and enjoy a
+          coffee break with friends or family. At Fika Hörnet, we bake our
+          pastries fresh every morning, using traditional Swedish recipes passed
+          down through generations. Our coffee is carefully selected and brewed
+          to savor, a case of perfection.
+        </p>
+      </section>
+
+      <section class="review-section">
+        <h3>What Our Customers Say</h3>
+
+        <div class="reviews-grid">
+          <blockquote class="reviews">
+            <div class="rating">★★★★★</div>
+            <p>
+              "This is my favorite spot in Jönköping! The kanelbullar are the
+              best I've ever had. A perfect place for a coffee break."
+            </p>
+            <cite><strong>Oscar L.</strong> <br />Regular Customer</cite>
+          </blockquote>
+
+          <blockquote class="reviews">
+            <div class="rating">★★★★★</div>
+            <p>
+              "Lovely, cozy atmosphere and delicious pastries. I always look
+              forward to my visits to Fika Hörnet!"
+            </p>
+            <cite><strong>Emma S.</strong> <br />Regular Customer</cite>
+          </blockquote>
+
+          <blockquote class="reviews">
+            <div class="rating">★★★★★</div>
+            <p>
+              "The coffee is exceptional, and the staff are so friendly and
+              welcoming. Feels like a home away from home."
+            </p>
+            <cite><strong>Henrik M.</strong> <br />Regular Customer</cite>
+          </blockquote>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Storgatan 12, 553 20 Jönköping</p>
+      <p>+46 36 123 456</p>
+      <p>info@fikahornet.se</p>
+      <p>Mon - Fri: 07:00 - 18:00 | Sat: 09:00 - 16:00 | Sun: Closed</p>
+    </footer>
   </body>
 </html>
