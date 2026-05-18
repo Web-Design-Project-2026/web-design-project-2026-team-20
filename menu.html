@@ -3,22 +3,127 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Menu</title>
+    <title>Menu - Fika Hörnet</title>
     <link rel="stylesheet" href="web.css" />
   </head>
+
   <body>
-    <header class="fika-hornet">
-      <h1>Fika Hörnet</h1>
+    <header>
+      <div class="logo">
+        <img src="logo.jpg" alt="Fika Hörnet Logo" />
+      </div>
+      <nav class="navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <nav class="main-navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="menu.html">Our Menu</a></li>
-        <li><a href="menu_bread.html">Bread & Pastries</a></li>
-        <li><a href="menu_drinks.html">Coffee & Drinks</a></li>
-        <li><a href="about.html">About Us</a></li>
-      </ul>
-    </nav>
+    <main>
+      <h2>Menu</h2>
+
+      <nav class="menu-categories">
+        <ul>
+          <li>
+            <a href="menu.html" class="category-button-active">Pastries</a>
+          </li>
+          <li><a href="menu_bread.html" class="category-button">Bread</a></li>
+          <li><a href="menu_drinks.html" class="category-button">Drinks</a></li>
+        </ul>
+      </nav>
+
+      <section class="menu-list">
+        <article class="menu-item">
+          <div class="item-image">
+            <img
+              src="kolakaka.jpg"
+              alt="A golden-brown sliced Kolakaka cookie on a plate"
+            />
+          </div>
+          <div class="item-details">
+            <h3>Kolakaka</h3>
+            <p>
+              Thin, crisp caramel cookies with a buttery texture and a hint of
+              golden syrup. Sweet, crunchy, and irresistibly moreish.
+            </p>
+            <p class="price">20 kr</p>
+          </div>
+        </article>
+
+        <article class="menu-item">
+          <div class="item-image">
+            <img
+              src="chokladboll.jpg"
+              alt="A bowl filled with traditional Swedish chocolate balls rolled in coconut flakes"
+            />
+          </div>
+          <div class="item-details">
+            <h3>Chokladboll</h3>
+            <p>
+              A rich, no-bake chocolate treat made with cocoa, oats, and butter,
+              rolled in coconut flakes. Deep, indulgent, and nostalgic.
+            </p>
+            <p class="price">20 kr</p>
+          </div>
+        </article>
+
+        <article class="menu-item">
+          <div class="item-image">
+            <img
+              src="vaniljbulle.jpg"
+              alt="A fluffy, golden vaniljbulle pastry topped with pearl sugar"
+            />
+          </div>
+          <div class="item-details">
+            <h3>Vaniljbulle</h3>
+            <p>
+              A soft, golden bun infused with smooth vanilla, lightly sweet and
+              perfectly fluffy. A comforting classic with a delicate aroma.
+            </p>
+            <p class="price">35 kr</p>
+          </div>
+        </article>
+
+        <article class="menu-item">
+          <div class="item-image">
+            <img
+              src="semla.jpg"
+              alt="A traditional Swedish Semla bun filled with almond paste and rich whipped cream"
+            />
+          </div>
+          <div class="item-details">
+            <h3>Semla</h3>
+            <p>
+              Soft cardamom bun filled with almond paste and whipped cream,
+              dusted with powdered sugar.
+            </p>
+            <p class="price">45 kr</p>
+          </div>
+        </article>
+
+        <article class="menu-item">
+          <div class="item-image">
+            <img
+              src="hallongrotta.jpg"
+              alt="Three buttery hallongrotta cookies with bright red raspberry jam centers"
+            />
+          </div>
+          <div class="item-details">
+            <h3>Hallongrotta</h3>
+            <p>Buttery shortbread cookie with a sweet raspberry jam center.</p>
+            <p class="price">20 kr</p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>Storgatan 12, 553 20 Jönköping</p>
+      <p>+46 36 123 456</p>
+      <p>info@fikahornet.se</p>
+      <p>Mon - Fri: 07:00 - 18:00 | Sat: 09:00 - 16:00 | Sun: Closed</p>
+    </footer>
   </body>
 </html>
