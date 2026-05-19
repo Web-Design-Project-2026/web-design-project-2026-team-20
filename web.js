@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   setActiveNavigationLink();
   setupMenuSearch();
+  showOpeningStatus();
 });
 
 /* Highlight */
@@ -57,5 +58,41 @@ function updateMenuCount(count, menuCount) {
     menuCount.textContent = "Showing 1 item";
   } else {
     menuCount.textContent = `Showing ${count} items`;
+  }
+}
+
+/* Shows if the cofe open */
+function showOpeningStatus() {
+  const statusElement = document.querySelector("[data-open-status]");
+
+  if (!statusElement) return;
+
+  const now = new Date();
+  const day = now.getDay();
+  const hour = now.getHours();
+  const minutes = now.getMinutes();
+  const currentTime = hour * 60 + minutes;
+
+  const weekdayOpening = 7 * 60;
+  const weekdayClosing = 18 * 60;
+  const saturdayOpening = 9 * 60;
+  const saturdayClosing = 16 * 60;
+
+  let isOpen = false;
+
+  if (day >= 1 && day <= 5) {
+    isOpen = currentTime >= weekdayOpening && currentTime < weekdayClosing;
+  } else if (day === 6) {
+    isOpen = currentTime >= saturdayOpening && currentTime < saturdayClosing;
+  }
+
+  if (isOpen) {
+    statusElement.textContent = "Open now";
+    statusElement.classList.add("open");
+    statusElement.classList.remove("closed");
+  } else {
+    statusElement.textContent = "Closed now";
+    statusElement.classList.add("closed");
+    statusElement.classList.remove("open");
   }
 }
