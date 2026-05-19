@@ -5,14 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Menu-drinks - Fika Hörnet</title>
     <link rel="stylesheet" href="web.css" />
+    <script src="web.js" defer></script>
   </head>
 
   <body>
     <header>
       <div class="logo">
-        <img src="logo.jpg" alt="Fika Hörnet Logo" />
+        <img src="logo.jpg" alt="Fika Hörnet bakery logo" />
       </div>
-      <nav class="navigation">
+
+      <button
+        class="menu-toggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="navigation" id="main-navigation">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="menu.html">Menu</a></li>
@@ -20,9 +33,17 @@
         </ul>
       </nav>
     </header>
-
     <main>
       <h2>Menu</h2>
+      <section class="menu-controls" aria-label="Menu search">
+        <label for="menu-search">Search the menu</label>
+        <input
+          type="search"
+          id="menu-search"
+          placeholder="Search for semla, coffee, bread..."
+        />
+        <p id="menu-count" aria-live="polite"></p>
+      </section>
 
       <nav class="menu-categories">
         <ul>
