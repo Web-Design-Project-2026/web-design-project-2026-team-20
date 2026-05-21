@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setActiveNavigationLink();
   setupMenuSearch();
   showOpeningStatus();
+  setupMobileMenu();
 });
 
 /* Highlight */
@@ -40,7 +41,7 @@ function setupMenuSearch() {
       const itemText = item.textContent.toLowerCase();
       const matchesSearch = itemText.includes(searchText);
 
-      item.style.display = matchesSearch ? "flex" : "none";
+      item.style.display = matchesSearch ? "grid" : "none";
 
       if (matchesSearch) {
         visibleItems++;
@@ -61,7 +62,7 @@ function updateMenuCount(count, menuCount) {
   }
 }
 
-/* Shows if the cofe open */
+/* Shows if the cafe is open */
 function showOpeningStatus() {
   const statusElement = document.querySelector("[data-open-status]");
 
@@ -95,4 +96,17 @@ function showOpeningStatus() {
     statusElement.classList.add("closed");
     statusElement.classList.remove("open");
   }
+}
+
+/* Mobile menu */
+function setupMobileMenu() {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navigation = document.querySelector(".navigation");
+
+  if (!menuToggle || !navigation) return;
+
+  menuToggle.addEventListener("click", () => {
+    const isOpen = navigation.classList.toggle("active");
+    menuToggle.setAttribute("aria-expanded", isOpen);
+  });
 }
