@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu-drinks - Fika Hörnet</title>
+    <link rel="stylesheet" href="web.css" />
+    <script src="web.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <img src="Images/logo.jpg" alt="Fika Hörnet bakery logo" />
+      </div>
+
+      <button
+        class="menu-toggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="navigation" id="main-navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h2>Menu</h2>
+      <section class="menu-controls" aria-label="Menu search">
+        <label for="menu-search">Search the menu</label>
+        <input
+          type="search"
+          id="menu-search"
+          placeholder="Search for semla, coffee, bread..."
+        />
+        <p id="menu-count" aria-live="polite"></p>
+      </section>
+
+      <nav class="menu-categories">
+        <ul>
+          <li>
+            <a href="menu.html" class="category-button">Pastries</a>
+          </li>
+          <li><a href="menu_bread.html" class="category-button">Bread</a></li>
+          <li>
+            <a href="menu_drinks.html" class="category-button-active">Drinks</a>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="menu-list">
+        <article class="menu-item">
+          <div class="item-image">
+            <img
+              src="Images/coffee.jpg"
+              alt="A steaming cup of freshly brewed coffee with a rich, dark color and a layer of crema on top"
+            />
+          </div>
+          <div class="item-details">
+            <h3>Coffee</h3>
+            <p>
+              Our signature blend of freshly roasted coffee beans, brewed to
+              perfection. Rich, aromatic, and the perfect companion to our
+              pastries.
+            </p>
+            <p class="price">35 kr</p>
+          </div>
+        </article>
+
+        <article class="menu-item">
+          <div class="item-image">
+            <img
+              src="Images/tea.jpg"
+              alt="A steaming cup of freshly brewed tea with a rich, amber color and a hint of lemon"
+            />
+          </div>
+          <div class="item-details">
+            <h3>Tea</h3>
+            <p>
+              A selection of premium loose-leaf teas, brewed fresh to order.
+              Choose from classic black, soothing green, or fragrant herbal
+              blends.
+            </p>
+            <p class="price">20 kr</p>
+          </div>
+        </article>
+
+        <article class="menu-item">
+          <div class="item-image">
+            <img
+              src="Images/milkshake.jpg"
+              alt="A thick, chocolate milkshake in a tall glass with a whipped cream topping and a cookie on top"
+            />
+          </div>
+          <div class="item-details">
+            <h3>Milkshake</h3>
+            <p>
+              A thick, chocolate milkshake in a tall glass with a whipped cream
+              topping and a cookie on top.
+            </p>
+            <p class="price">45 kr</p>
+          </div>
+        </article>
+
+        <article class="menu-item">
+          <div class="item-image">
+            <img
+              src="Images/soda.jpg"
+              alt="A refreshing glass of traditional Swedish soda with a vibrant color and a hint of citrus"
+            />
+          </div>
+          <div class="item-details">
+            <h3>Semla</h3>
+            <p>
+              A refreshing glass of traditional Swedish soda with a vibrant
+              color and a hint of citrus. Perfect for a sweet, fizzy treat on a
+              warm day.
+            </p>
+            <p class="price">25 kr</p>
+          </div>
+        </article>
+
+        <article class="menu-item">
+          <div class="item-image">
+            <img
+              src="Images/strawberry.jpg"
+              alt="A tall glass of strawberry soda with a bright pink color and a fresh strawberry garnish"
+            />
+          </div>
+          <div class="item-details">
+            <h3>Strawberry Soda</h3>
+            <p>
+              A tall glass of strawberry soda with a bright red color and a
+              fresh strawberry garnish. Perfect for a sweet, fizzy treat on a
+              warm day.
+            </p>
+            <p class="price">30 kr</p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>Storgatan 12, 553 20 Jönköping</p>
+      <p>+46 36 123 456</p>
+      <p>info@fikahornet.se</p>
+      <p>Mon - Fri: 07:00 - 18:00 | Sat: 09:00 - 16:00 | Sun: Closed</p>
+    </footer>
+  </body>
+</html>
